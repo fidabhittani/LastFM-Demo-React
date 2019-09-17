@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Results Root Component Tests Results Component ArtistsResultContainer renders correctly 1`] = `ShallowWrapper {}`;
+
+exports[`Results Root Component Tests Results Component EventsResultContainer renders correctly 1`] = `ShallowWrapper {}`;

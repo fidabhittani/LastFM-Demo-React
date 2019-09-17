@@ -1,0 +1,32 @@
+@import "~styles/variables";
+@import "~styles/mixins";
+
+.card-item {
+  /**
+        Responsive Breakpoinnts
+    */
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  display: flex;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  flex-grow: 1;
+  margin: 1em;
+  max-width: 30em;
+
+  @include xs {
+    margin: 5px 10px;
+    box-shadow: 0px 1px 10px rgba($color: $secondaryColor, $alpha: 0.2);
+  }
+  @include sm {
+    margin: 5px;
+    box-shadow: 5px 5px 20px rgba($color: $secondaryColor, $alpha: 0.2);
+  }
+
+  @include md {
+    margin: 10px;
+  }
+}

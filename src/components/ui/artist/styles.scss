@@ -1,0 +1,101 @@
+@import "~styles/variables";
+@import "~styles/mixins";
+
+.artist-item {
+  max-height: 100px;
+  display: flex;
+  background: white;
+  min-height: 100px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  align-items: center;
+  justify-content: flex-start;
+  transition: all 0.2s ease-in-out;
+  margin: 1em;
+
+  &.selected-artist {
+    background: rgba($color: $primaryColor, $alpha: 0.2);
+    @include xs {
+      margin: 5px;
+      min-width: 200px;
+      box-shadow: 0px 1px 5px rgba($color: $secondaryColor, $alpha: 0.2);
+      max-width: unset;
+    }
+    @include md {
+      max-width: 284px;
+    }
+  }
+  &:hover {
+    // background: rgba($color: $primaryColor, $alpha: 0.1);
+    .artist-info {
+      .artist-name {
+        color: rgba($color: $primaryColor, $alpha: 1);
+      }
+    }
+    .avatar {
+      border: 1px solid rgba($color: $primaryColor, $alpha: 1);
+    }
+  }
+  .avatar {
+    border-radius: 50%;
+    margin: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    overflow: hidden;
+    border: 1px solid rgba($color: $secondaryColor, $alpha: 0.2);
+    img {
+      height: auto;
+      width: 5em;
+    }
+    @include xs {
+      .avatar {
+        border-radius: unset;
+        flex: 0;
+      }
+    }
+  }
+  .artist-info {
+    padding: 1em 0;
+    .artist-name {
+      color: rgba($color: $primaryColor, $alpha: 0.8);
+      font-size: 16px;
+      margin: 5px 0px;
+    }
+    .artist-id {
+      color: rgba($color: $secondaryColor, $alpha: 0.5);
+      font-size: 12px;
+      width: 10em;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  /**
+        Responsive Breakpoinnts
+    */
+  @include xs {
+    margin: 5px;
+    min-width: 200px;
+    &:hover {
+      transform: scale(0.99);
+    }
+  }
+
+  @include sm {
+    margin: 5px;
+    min-width: 250px;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  @include md {
+    margin: 10px;
+    min-width: 284px;
+  }
+}

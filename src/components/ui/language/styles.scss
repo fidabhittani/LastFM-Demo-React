@@ -1,0 +1,38 @@
+@import "~styles/variables";
+
+.language {
+  position: relative;
+  display: inline-block;
+  margin-left: 2em;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    .languages-list {
+      display: block;
+    }
+  }
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .languages-list {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    color: rgba($color: $primaryColor, $alpha: 1);
+    transition: all 0.2s ease-in-out;
+
+    box-shadow: 0px 5px 16px 0px rgba($color: $secondaryColor, $alpha: 0.1);
+    min-width: 100px;
+    z-index: 1;
+    .lang-item {
+      cursor: pointer;
+      padding: 8px 16px;
+      margin: 5px;
+      &:hover {
+        background-color: rgba($color: $primaryColor, $alpha: 0.1);
+      }
+    }
+  }
+}

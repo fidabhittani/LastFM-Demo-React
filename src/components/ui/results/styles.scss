@@ -1,0 +1,75 @@
+@import "~styles/variables";
+@import "styles/_mixins.scss";
+
+.results-content {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+
+  .results-container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: auto;
+    transition: all 0.2s ease-in-out;
+    @include xs {
+      padding: 1em 0;
+      flex-direction: column;
+      flex-wrap: inherit;
+    }
+
+    @include sm {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    @include md {
+      flex-direction: row;
+      overflow: auto;
+    }
+
+    @include xl {
+    }
+  }
+
+  .artist-item-content {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    .go-back {
+      color: rgba($color: $primaryColor, $alpha: 1);
+      font-size: 12px;
+      cursor: pointer;
+    }
+  }
+  .upcomming-events {
+    font-size: 14px;
+    color: $secondaryColor;
+    padding: 15px 0 0 5px;
+  }
+  /** Apllying Responsiveness */
+
+  @include xs {
+    margin: 0em 1em;
+    padding: 1em 0;
+    height: calc(100vh - 5em);
+  }
+
+  @include sm {
+    margin: 1em 1em;
+    height: calc(100vh - 100px);
+  }
+  @include md {
+    margin: 1em 2em;
+    overflow: auto;
+  }
+
+  @include xxl {
+    margin: 2em 20em;
+    // justify-content: center;
+    height: calc(100vh - 8em);
+    &.artist {
+      height: calc(100vh - 15em);
+    }
+  }
+}

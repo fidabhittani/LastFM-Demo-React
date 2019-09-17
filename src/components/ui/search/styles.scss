@@ -1,0 +1,65 @@
+@import "~styles/variables";
+@import "~styles/mixins";
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  transform: translate(0%, 38%);
+  transition: all 0.2s ease-in-out;
+
+  overflow: hidden;
+  color: $secondaryColor;
+  .search-input {
+    position: relative;
+    transition: all 0.2s ease-in-out;
+
+    input {
+      height: 50px;
+      width: 100%;
+      line-height: 50px;
+      font-size: 14px;
+      outline: none;
+      border: none;
+      box-sizing: border-box;
+      box-shadow: 5px 5px 20px rgba($color: $secondaryColor, $alpha: 0.2);
+      padding: 0px 20px;
+      color: $secondaryColor;
+    }
+
+    .search-icon {
+      position: absolute;
+      top: 0;
+      right: 30px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      bottom: 0;
+    }
+    @include xs {
+      max-width: unset;
+      margin: 1em;
+      width: 100%;
+    }
+    @include sm {
+      max-width: 32em;
+    }
+
+    @include xl {
+      max-width: 600px;
+    }
+  }
+  @include xs {
+    transform: translate(0%, 0%);
+    padding: 0;
+  }
+  @include sm {
+    transform: translate(0%, 0%);
+    padding: 0;
+  }
+
+  @include md {
+    transform: translate(0%, 38%);
+    padding: 1em 0px 1.5em 0px;
+  }
+}
