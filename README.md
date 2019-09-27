@@ -45,17 +45,17 @@ Command to create an optimised create-react-app static deployed-ready build.
    -  A General `API` service `abstraction` is being written to handle API request across application which handles API requests and dispatch loader status, messages onto redux which will update the loader state and messages state on the UI.
    -  Additional services for api endpoints are written for entities like  `artists` which make use of this service.
  ##### Utils
-   -  Utils has the helper functions for various taks and sample-data if required.
+   -  Utils has the helper functions for various tasks and sample-data if required.
  ##### Contexts
    -  Like redux, I also tend to use a basic `AppContext` which might hold some basic data on top like `Language` innformation or `Theme` informations which the children on any level can access and update their state.
-   -  Thanks for Hooks for providing a neat API to `consume` this provided data using `useContext` down the component tree.
+   -  Thanks to Hooks for providing a neat API to `consume` this provided data using `useContext` down the component tree.
  ##### Messages
    -  Messages are kept inside Redux to keep track of the app wide message and accumulate the dispatch messages and relevant component is connected using `useSelector` to updpate its UI on messages change in redux.
  ##### Typings
-   -  Typescript has been used to create statically typed app, which has develipment advantaged and keep the app functionality consistent.
+   -  Typescript has been used to create statically typed app, which has development advantages and keep the app functionality consistent.
 
  ##### Components structure
-   -  Components inside `/components` have been used as containers and UI components
+   -  Components inside `/components` have been used as containers and `UI` components
    -  Containers hold the data, handle side effects initiating network request
    -  UI components just display the provided data making use of translations for labels.
    -  Ui components are kept neat and made re-usable across app. which makes them esily testable.
