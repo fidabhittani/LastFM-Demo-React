@@ -10,7 +10,7 @@ import store from "./store";
 import "toasted-notes/src/styles.css";
 import "./index.scss";
 
-const App = () => (
+const App: React.FC = () => (
   <Router>
     <StateProvider store={store}>
       <Root />
